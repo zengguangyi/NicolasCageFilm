@@ -14,14 +14,16 @@ $(function(){
 		var bgcss = function(id,p){		
 			if(id == mask){
 				id.css('background', 'url(images/in00'+p+'.jpg) no-repeat center center').fadeIn();
+				$("#text"+page).fadeIn('slow');
 			}else{
+				mask.hide();
+				$("#text"+page).hide();
 				id.css('background', 'url(images/in00'+p+'.jpg) no-repeat center center');
 			}
 		}
 		/*点击next*/
 		$(".topbar-next-btn").click(function() {	
 			if(!i_show.is(":animated")){
-				mask.hide();
 				if(page == page_count){
 					i_show.animate({top:'0px'}, 'slow');
 					bgcss(topbar,page); //将topbar背景图设为当前page页背景
@@ -38,7 +40,6 @@ $(function(){
 		/*点击prev*/
 		$(".topbar-prev-btn").click(function() {
 			if(!i_show.is(":animated")){
-				mask.hide();
 				if(page == 1){
 					i_show.animate({top:'-='+height*(page_count-1)}, 'slow');
 					bgcss(topbar,page); //将topbar背景图设为当前page页背景

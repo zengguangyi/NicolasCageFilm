@@ -5,6 +5,9 @@ html,body,ul,li,div{
 ul,li{
 	list-style: none;
 }
+a{
+	text-decoration: none;
+}
 #topbar{
 	height: 390px;
 	background: url(../images/in001.jpg) no-repeat center center;
@@ -39,6 +42,33 @@ ul,li{
 	float: left;
 }
 
+#topbar #topbar-center .textbox{
+	position: absolute;
+	bottom: 0;
+	margin: 1em;
+	display: none;
+}
+#topbar #topbar-center .textbox .hotfilm{
+	color: #ffffff;
+	font-size: 80%;
+	padding: 0.25em 0.8em 0.25em 0.8em;
+	background: #F98B33;
+	box-shadow: 0.25em 0.2em 0.2em #1B1A1A;
+	border-radius: 0.25em;
+}
+#topbar #topbar-center .textbox a{
+	color: #ffffff;
+	text-shadow: 0.2em 0.1em 0.2em #1B1A1A;
+}
+#topbar #topbar-center .textbox .textinfo i{
+	color: #F98B33;
+	padding-right: 0.5em;
+}
+#topbar #topbar-center .textbox .morelink i{
+	color: #000000;
+	padding-right: 0.5em;
+	text-shadow: none;
+}
 .topbar-btn{ position:absolute;top:0;width:100px;height:390px; z-index:10; cursor:pointer;  opacity:0.8}
 .topbar-prev-btn{left:-100px; background: url(../images/btn_l.png) no-repeat center center;}
 .topbar-next-btn{right:-100px; background: url(../images/btn_r.png) no-repeat center center;}
