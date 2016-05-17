@@ -10,6 +10,7 @@ a{
 }
 #topbar{
 	height: 390px;
+	width: 100%;
 	background: url(../images/in001.jpg) no-repeat center center;
 	overflow: hidden;
 }
@@ -52,7 +53,7 @@ a{
 	color: #ffffff;
 	font-size: 80%;
 	padding: 0.25em 0.8em 0.25em 0.8em;
-	background: #F98B33;
+	background: #FF6D00;
 	box-shadow: 0.25em 0.2em 0.2em #1B1A1A;
 	border-radius: 0.25em;
 }
@@ -61,7 +62,7 @@ a{
 	text-shadow: 0.2em 0.1em 0.2em #1B1A1A;
 }
 #topbar #topbar-center .textbox .textinfo i{
-	color: #F98B33;
+	color: #FF6D00;
 	padding-right: 0.5em;
 }
 #topbar #topbar-center .textbox .morelink i{
@@ -73,3 +74,68 @@ a{
 .topbar-prev-btn{left:-100px; background: url(../images/btn_l.png) no-repeat center center;}
 .topbar-next-btn{right:-100px; background: url(../images/btn_r.png) no-repeat center center;}
 
+.menu-highlight{
+	border-bottom: 4px solid #ffffff;
+}
+.menubar{
+	height: 75px;
+	width: 100%;
+	border-top: 1px solid #515151;
+	background-color: #333;
+}
+.menu-fixed-top{
+	position: fixed;
+	top: 0;
+}
+.menubar a{
+	color: #ffffff;
+}
+.menubar .menu-midbox{
+	height: 100%;
+	width: 80%;
+	margin: 0 auto;
+	color: #ffffff;
+	padding-left: 1em;
+}
+.menubar .menu-midbox ul{
+	float: left;
+	margin: 15px auto;
+	line-height: 45px;
+	border-right: 1px solid #6c6c6c;
+}
+.menubar .menu-midbox li{
+	display: inline-block;
+	margin-right: 2em;
+}
+.menubar .menu-midbox li:hover{
+	display: inline-block;
+	margin-right: 2em;
+	border-bottom: 4px solid #ffffff;
+}
+
+#searchbox{
+	float: left;
+	margin: 15px 0 15px 2em;
+	/*width: 300px;*/
+	height: 40px;
+	line-height: 45px;
+	background-color: #ffffff;
+	color: #515151;
+	border-radius: 5px;
+}
+#searchbtn i{
+	float: left;
+	height: 40px;
+	margin: 2px 0 0 5px;
+	cursor: pointer;
+}
+#searchinput{
+	float: left;
+	display: block;
+	padding: 0;
+	margin: auto 10px;
+	height: 40px;
+	width: 80px;
+	border: 0 none;
+	outline: none;
+}

@@ -61,7 +61,55 @@ $(function(){
 		}
 	}
 
+	/*菜单栏置顶的滚动条监听*/
+	function menuTopScroll(){
+		var menu = $(".menubar");
+		$(window).scroll(function() {
+			var top = document.documentElement.scrollTop || document.body.scrollTop;
+			if(top >= 390){
+				menu.addClass('menu-fixed-top');
+			}else{
+				menu.removeClass('menu-fixed-top');
+			}
+		});
+	}
+
+	/*search搜索框变换样式*/
+	function searchFocuBlur(){
+		var btn = $("#searchbtn");
+		var btn_i = $("#searchbtn i");
+		var input = $("#searchinput");
+
+		input.focus(function() {
+			if(!input.is(":animated")){
+				btn_i.addClass('addfocus');
+				$(this).animate({width: "400px"}, "fast");				
+			}
+		}).blur(function() {
+			btn_i.removeClass('addfocus');
+			$(this).animate({width: "80px"}, "fast"); //不进行动画检测，以免不响应
+		});
+
+		btn_i.mouseover(function() {
+			$(this).css('color', '#333');
+		}).mouseout(function() {
+			$(this).css('color', '#515151');
+		});
+	}
+
+	/*菜单路径高亮*/
+	function menuHighlight(){
+		var links = $(".menu-midbox ul a");
+		for(var i=0;i<links.length;i++){
+			var linkurl = links[i].getAttribute('href');
+			if(window.location.href.indexOf(linkurl) != -1)
+				$(links[i]).parent("li").addClass('menu-highlight');
+		}
+	}
 
 	/*执行topbarImg的图片滚动动画*/
 	topbarImg();
+	menuTopScroll();
+	searchFocuBlur();
+	menuHighlight();
 });
