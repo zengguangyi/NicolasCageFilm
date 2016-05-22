@@ -6,6 +6,7 @@ ul,li{
 	list-style: none;
 }
 a{
+	color: #1B1A1A;
 	text-decoration: none;
 }
 #topbar{
@@ -82,6 +83,7 @@ a{
 	width: 100%;
 	border-top: 1px solid #515151;
 	background-color: #333;
+	overflow: hidden;
 }
 .menu-fixed-top{
 	position: fixed;
@@ -90,18 +92,30 @@ a{
 .menubar a{
 	color: #ffffff;
 }
-.menubar .menu-midbox{
-	height: 100%;
-	width: 80%;
-	margin: 0 auto;
-	color: #ffffff;
-	padding-left: 1em;
+@media screen and (min-width: 1000px) {
+	.menubar .menu-midbox{
+		height: 100%;
+		width: 1000px;
+		margin: 0 auto;
+		color: #ffffff;
+	}
 }
+@media screen and (max-width: 1000px) {
+	.menubar .menu-midbox{
+		height: 100%;
+		width: 80%;
+		margin: 0 auto;
+		color: #ffffff;
+		/*padding-left: 1em;*/
+	}
+}
+
 .menubar .menu-midbox ul{
 	float: left;
 	margin: 15px auto;
 	line-height: 45px;
 	border-right: 1px solid #6c6c6c;
+	padding-left: 1em;
 }
 .menubar .menu-midbox li{
 	display: inline-block;
@@ -138,4 +152,155 @@ a{
 	width: 80px;
 	border: 0 none;
 	outline: none;
+}
+
+@media screen and (min-width: 1000px) {
+	.filmbox{
+		width: 1000px;
+		margin: 100px auto 0 auto;
+		/*background-color: #DBEC6D;*/
+	}
+}
+@media screen and (max-width: 1000px) {
+	.filmbox{
+		width: 90%;
+		margin: 50px auto 0 auto;
+		/*background-color: #DBEC6D;*/
+	}
+}
+.filmbox-title{
+	width: 100%;
+	height: 53px;
+	border-bottom: 1px solid #515151;
+	overflow: hidden;
+}
+.fltiH2{
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 53px;
+	height: 100%;
+	padding: 0 15px;
+	width: 180px;
+	float: left;
+	border-left: 10px solid #FF6D00;
+	margin-top: 0;
+}
+.fltiDiv{
+	font-size: 14px;
+	line-height: 30px;
+	margin-top: 15px;
+	width: 500px;
+	float: left;
+}
+.fltiDiv a{
+	color: #08c;
+}
+.fltiDiv a:hover,.moviebtn i:hover,.moviebtn strong{
+	color: #515151;
+}
+
+
+.moviebox{
+	width: 100%;
+	padding-top: 1em;
+}
+
+.firstmovie{
+	width: 272px;
+	float: left;
+}
+.firstmovie img{
+	width: 270px;
+	height: 360px;
+}
+
+.firstmovie dd{
+	position: relative;
+	margin-left: 0;
+}
+.score{
+	background-color: #FF6D00;
+	color: #ffffff;
+	font: 12px/50%;
+	height: 52px;
+	width: 52px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	text-align: center;
+}
+.score b{
+	display: block;
+	font-size: 12px;
+	line-height: 1em;
+	padding: 8px 0 4px;
+}
+.score p{
+	font-size: 24px;
+	line-height: 1em;
+	margin-top: 0;
+}
+.firstmovie h2,.firstmovie h3{
+	padding-left: 65px;
+	font-weight: normal;
+	margin: 0;
+}
+.firstmovie h2 a:hover,.firstmovie h3 a:hover{
+	color: #08c;	
+}
+.firstmovie h2{
+	font-size: 20px;
+	
+	line-height: 1.4em;
+}
+.firstmovie h3{
+	font-size: 14px;
+	line-height: 24px;
+}
+.hotmovie{
+	color: #679c21;
+	font-size: 18px;
+	line-height: 26px;
+	margin: 0;
+	padding: 10px 0 10px 0;
+}
+.hotmovie i{
+	color: #CAC7C7;
+}
+.moviebtn{
+	text-align: right;
+	position: relative;
+}
+.moviebtn i{
+	float: left;
+	line-height: 46px;
+	color: #292929;
+	cursor: pointer;
+}
+.moviebtn strong{
+	float: left;
+	line-height: 46px;
+	margin-left: 1em;
+}
+.moviebtn a{
+	color: #ffffff;
+	background-color: #0081cc;
+	border-radius: 40px;
+	font-size: 24px;
+	height: 46px;
+	letter-spacing: 2px;
+	line-height: 46px;
+	margin-left: 10px;
+	padding: 10px 20px;
+}
+.moviebtn a:hover{
+	background-color: #0074a9;
+}
+
+
+.othermovie{
+	width: 680px;
+	height: 540px;
+	background-color: #A5ECB0;
+	float: right;
 }
