@@ -84,6 +84,7 @@ a{
 	border-top: 1px solid #515151;
 	background-color: #333;
 	overflow: hidden;
+	z-index: 10;
 }
 .menu-fixed-top{
 	position: fixed;
@@ -204,11 +205,19 @@ a{
 	width: 100%;
 	padding-top: 1em;
 }
-
-.firstmovie{
-	width: 272px;
-	float: left;
+@media screen and (min-width: 1000px) {
+	.firstmovie{
+		width: 272px;
+		float: left;
+	}
 }
+@media screen and (max-width: 1000px) {
+	.firstmovie{
+		width: 272px;
+		margin: 10px auto;
+	}
+}
+
 .firstmovie img{
 	width: 270px;
 	height: 360px;
@@ -297,9 +306,16 @@ a{
 	background-color: #0074a9;
 }
 
-
-.othermovie{
-	float: right;
+@media screen and (min-width: 1000px){
+	.othermovie{
+		float: right;
+	}
+}
+@media screen and (max-width: 1000px) {
+	.othermovie{
+		margin: 0 auto;
+		width: 680px;
+	}
 }
 .othermovie ul{
 	clear: both;
