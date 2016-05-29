@@ -1,4 +1,4 @@
-html,body,ul,li,div{
+html,body,ul,li,div,dl{
 	margin: 0;
 	padding: 0;
 }
@@ -245,7 +245,7 @@ a{
 	font-weight: normal;
 	margin: 0;
 }
-.firstmovie h2 a:hover,.firstmovie h3 a:hover{
+.firstmovie h2 a:hover,.firstmovie h3 a:hover,.othermovie li dd:not(.btns) a:hover,.othermovie li dt a:hover{
 	color: #08c;	
 }
 .firstmovie h2{
@@ -293,14 +293,72 @@ a{
 	margin-left: 10px;
 	padding: 10px 20px;
 }
-.moviebtn a:hover{
+.moviebtn a:hover,.btns a:hover{
 	background-color: #0074a9;
 }
 
 
 .othermovie{
-	width: 680px;
-	height: 540px;
-	background-color: #A5ECB0;
 	float: right;
+}
+.othermovie ul{
+	clear: both;
+	display: block;
+}
+.othermovie li{
+	margin: 0 0 20px 10px;
+	width: 320px;
+}
+
+.picbox{
+	margin-right: 13px;
+	position: relative;
+	width: 102px;
+}
+.picbox img{
+	display: block;
+}
+.othermovie li,.picbox,.othermovie dl{
+	display: inline;
+	float: left;
+}
+.othermovie dd{
+	margin: 0;
+}
+.othermovie li dt{
+	font-size: 18px;
+	line-height: 24px;
+	padding-bottom: 8px;
+}
+.othermovie li dd{
+	font-size: 14px;
+	line-height: 24px;
+}
+dd.btns{
+	margin-top: 10px;
+}
+.btns a{
+	background: #0081bc none repeat scroll 0 0;
+	border-radius: 15px;
+	color: #fff;
+	display: inline-block;
+	font-size: 14px;
+	height: 24px;
+	letter-spacing: 2px;
+	line-height: 25px;
+	position: relative;
+	width: 94px;
+	text-align: center;
+	cursor: pointer;
+}
+.othermovie-score{
+	background: #679c21;
+	bottom: -5px;
+	color: #fff;
+	font-size: 14px;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 5px;
+	position: absolute;
+	right: -5px;
 }
